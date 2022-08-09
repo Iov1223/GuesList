@@ -13,6 +13,31 @@ namespace GuesList
             public string Name;
             public int Age;
         }
+        Program(Human[] human)
+        {
+            human[0].Name = "Федя";
+            human[0].Age = 24;
+            human[1].Name = "Ержан";
+            human[1].Age = 12;
+            human[2].Name = "Феофан";
+            human[2].Age = 45;
+            human[3].Name = "Вальдемар";
+            human[3].Age = 46;
+            human[4].Name = "Миролюб";
+            human[4].Age = 99;
+            human[5].Name = "Светозар";
+            human[5].Age = 18;
+            human[6].Name = "Жорж";
+            human[6].Age = 55;
+            human[7].Name = "Гаврила";
+            human[7].Age = 12;
+            human[8].Name = "Герасим";
+            human[8].Age = 37;
+            human[9].Name = "Светозар";
+            human[9].Age = 85;
+            human[10].Name = "Джесси Пинкман";
+            human[10].Age = 17;
+        }
         static void ReplaceElement(Human[] human, int _number, string _item, int _item2)
         {
             human[_number].Name = _item;
@@ -84,34 +109,8 @@ namespace GuesList
         }
         static void Main(string[] args)
         {
-            /*
-             * Пытался вынести заполнение структуры из Main,
-             * но не получилось. Если есть возможность можете изменить код
-             * с заполнением структуры вне Main и скинуть мне, я поразбираю
-             */
             Human[] human = new Human[11];
-            human[0].Name = "Федя";
-            human[0].Age = 24;
-            human[1].Name = "Ержан";
-            human[1].Age = 12;
-            human[2].Name = "Феофан";
-            human[2].Age = 45;
-            human[3].Name = "Вальдемар";
-            human[3].Age = 46;
-            human[4].Name = "Миролюб";
-            human[4].Age = 99;
-            human[5].Name = "Светозар";
-            human[5].Age = 18;
-            human[6].Name = "Жорж";
-            human[6].Age = 55;
-            human[7].Name = "Гаврила";
-            human[7].Age = 12;
-            human[8].Name = "Герасим";
-            human[8].Age = 37;
-            human[9].Name = "Светозар";
-            human[9].Age = 85;
-            human[10].Name = "Джесси Пинкман";
-            human[10].Age = 17;
+            Program program = new Program(human);
             GuestSearch(human);
             ReplaceGuest(human);
         }
